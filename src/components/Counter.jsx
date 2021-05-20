@@ -7,19 +7,20 @@ export default class Counter extends Component {
             count: 0,
         };
     }
+
     addCount = () => {
         this.setState({
             count: this.state.count + 1,
         });
     };
+
     subCount = () => {
         this.setState({
             count: this.state.count - 1,
         });
     };
+
     render() {
-        console.log("this", this);
-        console.log("props", this.props);
         return (
             <div>
                 <h1>{this.props.title}</h1>
