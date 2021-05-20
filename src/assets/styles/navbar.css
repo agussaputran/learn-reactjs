@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: "#606060";
+}
+
+.navbar__item {
+    padding: 10px;
+}
+
+.navbar--small {
+    font-size: 6px;
+}
