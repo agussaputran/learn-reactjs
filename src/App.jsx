@@ -4,6 +4,7 @@ import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 import Navbar from "./layouts/Navbar";
 import Footer from "./layouts/Footer";
 import Home from "./pages/Home";
+import Hook from "./pages/Hook";
 
 function App() {
   return (
@@ -12,23 +13,18 @@ function App() {
         <div className="wrapper">
           <Navbar />
           <hr />
-
           <Switch>
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/about" exact>
-              <h2>Page about</h2>
+            <Route path="/hook" exact>
+              <Hook />
             </Route>
             <Route path="*" exact>
               <Redirect to="/" />
             </Route>
           </Switch>
-
-          <Footer content="Konten footer">
-            <div>Children props</div>
-            <div>Tambah child</div>
-          </Footer>
+          {<Footer content="Konten footer" />}
         </div>
       </div>
     </BrowserRouter>

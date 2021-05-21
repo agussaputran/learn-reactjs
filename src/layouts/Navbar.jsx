@@ -9,13 +9,10 @@ class Navbar extends Component {
         return (
             <div className="navbar">
                 <div className="navbar__item">
-                    <Link to="/">Home</Link>
+                    <Link to="/">Class</Link>
                 </div>
                 <div className="navbar__item">
-                    <Link to="/about">About</Link>
-                </div>
-                <div className="navbar__item navbar__item--small">
-                    <Link to="/about">Small</Link>
+                    <Link to="/hook">Hook</Link>
                 </div>
             </div>
         );

@@ -8,6 +8,23 @@ export default class Counter extends Component {
         };
     }
 
+    componentDidMount() {
+        console.log("mount");
+        this.setState({
+            count: 10,
+        });
+    }
+
+    componentDidUpdate() {
+        console.log("update");
+        document.title = `State count = ${this.state.count}`;
+    }
+
+    componentWillUnmount() {
+        console.log("unmount");
+        document.title = "Unmount counter";
+    }
+
     addCount = () => {
         this.setState({
             count: this.state.count + 1,
@@ -21,6 +38,8 @@ export default class Counter extends Component {
     };
 
     render() {
+        console.log("this", this);
+        console.log("props", this.props);
         return (
             <div>
                 <h1>{this.props.title}</h1>
